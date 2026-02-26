@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.marscroll {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: rgba(47, 151, 47, 0.8);
+  --max-width: 20rem;
+  width: min(80% - 0rem, var(--max-width));
+  outline: 3px solid white;
+  border-radius: 48px;
+  font-family: "sf-pro-regular", sans-serif;
+  color: var(--white);
+}

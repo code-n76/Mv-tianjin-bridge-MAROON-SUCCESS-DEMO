@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <title>Mv tianjin bridge Operated by MDZ</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/LOGO.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="stylesheet" href="./modal.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/auto-popup.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/brand.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/buy-online.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/marscroll.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/popcheck.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/greeting.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/preloader.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/rate.css" type="text/css" />
+  </head>
+  <body class="relative portal disable-text-selection">
+    <!-- Start of Preloader -->
+    <div id="preloader">
+      <!-- <p>Welcome to Mv tianjin bridge Operated by MDZ</p> -->
+      <img src="./assets/img/LOGO.png" alt="" />
+      <!-- <p></p> -->
+      <span class="loader"></span>
+    </div>
+    <!-- End of Preloader -->
+
+    <!-- Start of Auto Popup Promo -->
+    <div class="auto-popup">
+      <!-- Start of Message -->
+      <!-- <p class="auto-pop-message">
+        <img src="./assets/img/main-pop.jpg" />
+      </p> -->
+      <!-- End of Message -->
+
+      <!-- <label>
+        <div class="button bg" id="close">Close</div>
+      </label> -->
+    </div>
+
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        setTimeout(function open(event) {
+          document.querySelector(".auto-popup").style.display = "block";
+        }, 1000);
+      });
+
+      document.querySelector("#close").addEventListener("click", function () {
+        document.querySelector(".auto-popup").style.display = "none";
+      });
+    </script>
+    <!-- End of Auto Popup Promo -->
+
+    <main class="main active">
+      <audio id="Ipl" loop>
+        <source src="./assets/audio/music.ogg" />
+      </audio>
+      <script>
+        // alert("Touch the screen to play music");
+
+        window.addEventListener("click", function () {
+          var audio = document.getElementById("Ipl");
+          audio.play();
+        });
+      </script>
+
+      <div class="main-logo">
+        <img src="./assets/img/LOGO.png" alt="" />
+        <!-- <p></p> -->
+      </div>
+
+      <!-- Start of Marquee -->
+      <!-- <table class="marscroll">
+        <tr>
+          <th>
+            <marquee Scrollamount="3">
+              Free Wifi Schedule Dates: &nbsp; DEC 1 &nbsp; | &nbsp; DEC 2
+              &nbsp; | &nbsp; DEC 8 &nbsp; | &nbsp; DEC 15 &nbsp; | &nbsp; DEC
+              22 &nbsp; | &nbsp; DEC 25 &nbsp; | &nbsp; DEC 29 &nbsp; | &nbsp;
+              JAN 1
+            </marquee>
+          </th>
+        </tr>
+      </table> -->
+      <!-- End of Marquee -->
+
+      <div class="m-container">
+        <div class="form-box form-glass">
+          <form id="login-form">
+            <!-- ERROR MESSAGE -->
+            <div id="hint-container" class="hidden">
+              <div class="popcheck" id="popcheck">
+                <svg viewBox="0 0 24 24" style="fill: rgb(220, 53, 69)">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  ></path>
+                </svg>
+                <div class="status">
+                  <p id="oper-hint" style="margin: 0 !important">
+                    Please try again.
+                  </p>
+                </div>
+
+                <br /><br /><br />
+
+                <!-- Start of Social Media -->
+                <!-- <div class="forgot_voucher">
+                  <p>Forgot voucher code?</p>
+                  <a href="https://tawk.to/chat/">
+                    <img src="./assets/img/chat.png" alt="" />Chat Us
+                  </a>
+                </div> -->
+                <!-- End of Social Media -->
+
+                <button type="button" onclick="closePopup()">OK</button>
+              </div>
+            </div>
+            <div id="hotspot-section">
+              <select
+                id="hotspot-selector"
+                class="oper-section-item my-3"
+              ></select>
+            </div>
+
+            <!-- INPUT TEXT FOR VOUCHER CODE -->
+            <div id="input-voucher" class="relative my-3">
+              <input
+                id="voucherCode"
+                name="voucherCode"
+                type="text"
+                maxlength="100"
+                class="inp-code"
+                placeholder="Voucher Code"
+              />
+              <!-- <div id="input-line" class="absolute"></div> -->
+            </div>
+
+            <div id="input-user" class="relative my-3">
+              <!-- <input
+                id="username"
+                name="username"
+                type="text"
+                class="inp-code"
+                placeholder="Username"
+              /> -->
+            </div>
+            <div id="input-password" class="relative my-3 user-input">
+              <!-- <input
+                id="password"
+                name="password"
+                type="password"
+                class="inp-code"
+                placeholder="Password"
+              /> -->
+
+              <div class="eye-ico">
+                <img src="./assets/icon/hidden.png" id="eyeicony" />
+              </div>
+            </div>
+            <script>
+              let eyeicony = document.getElementById("eyeicony");
+              let passwordy = document.getElementById("password");
+
+              eyeicony.onclick = function () {
+                if (passwordy.type == "password") {
+                  passwordy.type = "text";
+                  eyeicony.src = "./assets/icon/eye.png";
+                } else {
+                  passwordy.type = "password";
+                  eyeicony.src = "./assets/icon/hidden.png";
+                }
+              };
+            </script>
+            <div id="input-simple" class="relative my-3">
+              <!-- <input
+                id="simplePassword"
+                name="simplePassword"
+                type="password"
+                class="inp-code"
+                placeholder="Password"
+              /> -->
+              <div class="eye-ico">
+                <img src="./assets/icon/hidden.png" id="eyeiconx" />
+              </div>
+            </div>
+            <script>
+              let eyeiconx = document.getElementById("eyeiconx");
+              let passwordx = document.getElementById("simplePassword");
+
+              eyeiconx.onclick = function () {
+                if (passwordx.type == "password") {
+                  passwordx.type = "text";
+                  eyeiconx.src = "./assets/icon/eye.png";
+                } else {
+                  passwordx.type = "password";
+                  eyeiconx.src = "./assets/icon/hidden.png";
+                }
+              };
+            </script>
+            <div id="input-phone-num" class="relative my-3">
+              <!-- +<input id="country-code" /><input
+                id="phone-number"
+                name="phone-number"
+                type="text"
+                class="inp-code"
+                placeholder="Phone Number"
+              /> -->
+            </div>
+            <div id="input-verify-code" class="relative my-3">
+              <!-- <input
+                id="verify-code"
+                name="verify-code"
+                type="text"
+                class="inp-code my-3"
+                placeholder="Verification Code"
+              /><button
+                id="get-code"
+                class="btn-code"
+                type="button"
+                onclick="buttonClick()"
+              >
+                Get Code
+              </button> -->
+            </div>
+            <input name="clientMac" id="cMac" style="display: none" />
+            <input
+              name="radiusSvrIp"
+              id="radiusServerIp"
+              style="display: none"
+            />
+
+            <div id="button-area">
+              <!-- <button
+                id="button-facebook"
+                class="btn-fb my-3"
+                type="button"
+                onclick="buttonClick()"
+              >
+                Facebook
+              </button> -->
+              <button
+                class="btn-login my-3"
+                id="button-login"
+                onclick="openPopup(); audio.play()"
+                type="button"
+                onclick="buttonClick(); openPopup()"
+              >
+                Connect
+              </button>
+
+              <script type="text/javascript">
+                const audio = new Audio();
+                audio.src = "./assets/audio/login.mp3";
+              </script>
+
+              <!-- <a href="" class="gcash_btn">
+                Buy with &nbsp;
+                <img
+                  src="./assets/img/MAYA-GCash.png"
+                  style="height: 35px; width: auto"
+                />
+              </a> -->
+
+              <script>
+                let popcheck = document.getElementById("popcheck");
+
+                function openPopup() {
+                  popcheck.classList.add("open-popup");
+                }
+                function closePopup() {
+                  popcheck.classList.remove("open-popup");
+                }
+              </script>
+            </div>
+          </form>
+        </div>
+
+        <!-- <br /> -->
+
+        <!-- Starts of Modals -->
+        <a class="mobutton" href="#modal1">View rates</a>
+
+        <div class="popup" id="modal1">
+          <a class="popup__overlay" href="#"></a>
+          <div class="popup__wrapper">
+            <a class="popup__close" href="#"><img src="" alt="" />Close</a>
+
+            <!-- <img class="modal1_img" src="./assets/img/sample.jpeg" alt="" /> -->
+
+            <div class="modal-box modal-glass">
+              <h2>Wifi Rates</h2>
+            </div>
+
+            <br /><br />
+
+            <!-- Start of Rates -->
+            <table id="rates" class="rates">
+              <thead>
+                <tr class="thead">
+                  <th id="th-price">PRICE</th>
+                  <th>VALID</th>
+                  <!-- <th id="th-valid"></th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <b>Php 5</b>
+                  </td>
+                  <!-- <td><b></b></td> -->
+                  <td><b>3 hours</b></td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Php 10</b>
+                  </td>
+                  <!-- <td><b></b></td> -->
+                  <td><b>7 hours</b></td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Php 30</b>
+                  </td>
+                  <!-- <td><b></b></td> -->
+                  <td><b>1 day</b></td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Php 300</b>
+                  </td>
+                  <!-- <td><b></b></td> -->
+                  <td><b>1 month</b></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="tfoot">
+                  <th id="th-udp" colspan="2">UNLIMITED DATA RATES</th>
+                </tr>
+              </tfoot>
+            </table>
+            <!-- End of Rates -->
+
+            <br /><br />
+
+            <div class="brand">
+              <p>
+                Mv tianjin bridge Operated by MDZ <br />
+                2026
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <a class="mobutton2" href="#modal2">Other Services</a> -->
+
+        <!-- <div class="popup" id="modal2">
+          <a class="popup__overlay" href="#"></a>
+          <div class="popup__wrapper">
+            <a class="popup__close" href="#"><img src="" alt="" />Close</a>
+
+            <div class="modal-box modal-glass">
+              <h2>Other Services</h2>
+            </div>
+
+            <br /><br />
+
+            <p class="modal-box2">
+              • Photo Copy <br />
+              • Printing <br />
+              • Scan <br />
+              • Laminate <br />
+            </p>
+
+            <br /><br />
+
+            <div class="brand">
+              <p>
+                Mv tianjin bridge Operated by MDZ <br />
+                2026
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <!-- End of Modals -->
+      </div>
+
+      <!-- <br /> -->
+
+      <!-- Start of Brand -->
+      <p class="brand">
+        Mv tianjin bridge Operated by MDZ <br />
+        2026
+      </p>
+      <!-- End of Brand -->
+    </main>
+
+    <!-- SUCCESS POPUP -->
+    <div id="success-container " class="success-container">
+      <svg
+        width="64"
+        height="64"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_253_4)" />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M22 13.3842L20.6158 12L14.3687 18.2471L11.3842 15.2625L10 16.6467L14.3683 21.0149L14.9724 20.4108L14.9729 20.4112L22 13.3842Z"
+          fill="white"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_253_4"
+            x1="5"
+            y1="5"
+            x2="27"
+            y2="27"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#56B60E" />
+            <stop offset="1" stop-color="#007bff" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <p class="log-success">
+        You are now connected. <br />
+        Enjoy surfing!
+      </p>
+    </div>
+
+    <!-- AUDIO IF LOGIN IS SUCCESS -->
+    <audio id="login-success-sound" src="./assets/audio/voice.mp3"></audio>
+
+    <!-- FOR HIDING THE MODAL IF THE AGREE BUTTON IN MODAL IS CLICKED -->
+    <script>
+      $(document).ready(function () {
+        $("#agreeLabel").click(function () {
+          $("#exampleModalCenter").modal("hide");
+        });
+      });
+    </script>
+
+    <!-- TO ENABLE / DISABLE THE LOGIN BUTTON BASE ON CHECKBOX IF IT IS CHECKED-->
+    <script>
+      function checkChange() {
+        let loginbtn = document.getElementById("button-login");
+        const checkbox = document.getElementById("gridCheck1");
+        if (checkbox.checked) {
+          console.log("Checkbox is checked.");
+          loginbtn.classList.remove("btn-disable-login");
+          loginbtn.disabled = false;
+        } else {
+          console.log("Checkbox is not checked.");
+          loginbtn.classList.add("btn-disable-login");
+          loginbtn.disabled = true;
+        }
+      }
+
+      //  TO CHECK IF THE BUTTON CLICKED
+      function buttonClick() {
+        let loginbtn = document.getElementById("button-login");
+        if (!loginbtn.disabled) {
+          // alert('Button clicked!');
+          console.log("button clicked");
+        }
+      }
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <!-- <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script> -->
+    <!--End of Tawk.to Script-->
+
+    <!-- Start of Preloader JS -->
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <!-- End of Preloader JS -->
+
+    <script src="index.js"></script>
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

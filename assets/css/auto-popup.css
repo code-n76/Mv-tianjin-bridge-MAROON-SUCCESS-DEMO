@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auto-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: center;
+  z-index: 9;
+}
+
+#close {
+  font-size: 20px;
+  font-weight: 400;
+  width: 150px;
+  padding: 3px 50px 3px 50px;
+  border-radius: 48px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: auto;
+  color: var(--white);
+  background-color: var(--btns-bak-clr);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+#close:hover,
+#close:active {
+  font-size: 20px;
+  font-weight: 400;
+  width: 150px;
+  padding: 3px 50px 3px 50px;
+  border-radius: 48px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: auto;
+  color: var(--red);
+  background-color: var(--btns-bak-clr-hvr);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.auto-pop-message {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.auto-pop-message img {
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 1240px) {
+  .auto-pop-message img {
+    --max-width: 20rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .auto-pop-message img {
+    --max-width: 20rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auto-pop-message img {
+    --max-width: 20rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .auto-pop-message img {
+    --max-width: 20rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .auto-pop-message img {
+    --max-width: 20rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .auto-pop-message img {
+    --max-width: 30rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .auto-pop-message img {
+    --max-width: 30rem;
+    width: min(95% - 0rem, var(--max-width));
+    border: 5px solid var(--btns-bak-clr);
+  }
+}
